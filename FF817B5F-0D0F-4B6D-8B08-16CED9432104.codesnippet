@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MyTargetAction</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@property (nonatomic, weak) id target;
+    @property (nonatomic, assign) SEL action;
+    if (self.target &amp;&amp; [self.target respondsToSelector:self.action]) {
+        NSMethodSignature *methodSignature = [self.target methodSignatureForSelector:self.action];
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSignature];
+        invocation.selector = self.action;
+        
+        if (methodSignature.numberOfArguments &gt;= 3) {
+            UIGestureRecognizer *recognizer = (UIGestureRecognizer *)sender;
+            UIView *view = recognizer.view;
+            [invocation setArgument:&amp;view atIndex:2];
+        }
+        
+        [invocation invokeWithTarget:self.target];
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FF817B5F-0D0F-4B6D-8B08-16CED9432104</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>MyTargetAction</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

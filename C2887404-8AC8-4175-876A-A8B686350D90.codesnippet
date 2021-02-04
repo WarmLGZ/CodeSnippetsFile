@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MyCornersSet</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self setRounded:self.bookIndexLab.bounds view:&lt;#view#&gt; corners:UIRectCornerTopLeft | UIRectCornerBottomRight cornerRadii:CGSizeMake(&lt;#size#&gt;, &lt;#size#&gt;)];
+}
+
+- (void)setRounded:(CGRect)rect view:(UIView *)view corners:(UIRectCorner)corners cornerRadii:(CGSize)cornerRadii {
+    UIBezierPath* maskPath = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:corners cornerRadii:cornerRadii];
+    maskPath.lineWidth = 0.f;
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+    maskLayer.frame = view.bounds;
+    maskLayer.path = maskPath.CGPath;
+    view.layer.mask = maskLayer;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C2887404-8AC8-4175-876A-A8B686350D90</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>MyCornersSet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

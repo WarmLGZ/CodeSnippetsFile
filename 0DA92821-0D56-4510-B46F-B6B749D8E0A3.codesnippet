@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MyCollectionView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+flowLayout.minimumLineSpacing = &lt;#float#&gt;;
+    flowLayout.minimumInteritemSpacing = &lt;#float#&gt;;
+    flowLayout.itemSize = CGSizeMake(&lt;#float#&gt;, &lt;#float#&gt;);
+    flowLayout.sectionInset = UIEdgeInsetsMake(&lt;#float#&gt;, &lt;#float#&gt;, &lt;#float#&gt;, &lt;#float#&gt;);
+    // 设置头视图加这句不需要就删掉
+    flowLayout.headerReferenceSize = CGSizeMake(kScreenWidth, 70);
+    
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+    self.recipeCollectionView = collectionView;
+    [collectionView registerClass:[DYKTRecipeCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([DYKTRecipeCollectionViewCell class])];
+    collectionView.delegate = self;
+    collectionView.dataSource = self;
+    [self addSubview:collectionView];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0DA92821-0D56-4510-B46F-B6B749D8E0A3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>MyCollectionView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MyAddVC</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    &lt;#VC#&gt; *&lt;#vcName#&gt; = [[&lt;#VC#&gt; alloc] init];
+    [self addChildViewController:&lt;#vcName#&gt;];
+    [self.view addSubview:&lt;#vcName#&gt;.view];
+    [&lt;#vcName#&gt; didMoveToParentViewController:self];
+    
+    [&lt;#vcName#&gt;.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7B2E551C-3326-472D-BA27-FF0B3628061B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>MyAddVC</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

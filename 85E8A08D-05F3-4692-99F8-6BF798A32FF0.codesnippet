@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MySingleClass</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>static &lt;#ClassSingle#&gt; *_sharedSingleton = nil;
+static dispatch_once_t _onceToken;
+
++ (instancetype)shareSingleton {
+    dispatch_once(&amp;onceToken, ^{
+        if (_sharedSingleton == nil) {
+            _sharedSingleton = [[super allocWithZone:NULL] init];
+        }
+    });
+    return _sharedSingleton;
+}
+
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    return [&lt;#ClassSingle#&gt; shareSingleton];
+}
+
+- (id)copyWithZone:(nullable NSZone *)zone {
+    return [&lt;#ClassSingle#&gt; shareSingleton];
+}
+
+- (id)mutableCopyWithZone:(nullable NSZone *)zone {
+    return [&lt;#ClassSingle#&gt; shareSingleton];
+}
+
+- (void)destorySingle {
+    _onceToken = 0;
+    _sharedSingleton = nil;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>85E8A08D-05F3-4692-99F8-6BF798A32FF0</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>MySingleClass</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

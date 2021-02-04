@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MyHeaderViewFitSize</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)headerViewFitSize {
+    CGFloat height = [self.headerView systemLayoutSizeFittingSize:UILayoutFittingExpandedSize].height;
+    CGRect frame = self.headerView.frame;
+    frame.size.height = height;
+    self.headerView.frame = frame;
+    
+    self.myTableView.tableHeaderView = self.headerView;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BE9C41A5-59C5-4D41-8896-7A765955546F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>MyHeaderViewFitSize</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

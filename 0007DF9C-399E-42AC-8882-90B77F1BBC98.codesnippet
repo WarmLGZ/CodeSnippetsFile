@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MyCollectionViewDeleage</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+#pragma mark - UICollectionViewDataSource
+
+- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    &lt;#cell#&gt; *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([DYKTRecipeCollectionViewCell class]) forIndexPath:indexPath];
+    
+    return cell;
+}
+
+- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return &lt;#float#&gt;;
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    // 动态size则写 固定则删
+    static DYKTRecipeCollectionViewCell *cell = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&amp;onceToken, ^{
+        cell = [[DYKTRecipeCollectionViewCell alloc] initWithFrame:CGRectMake(0.0, 0.0, CGFLOAT_MAX, CGFLOAT_MAX)];
+    });
+    
+    cell.medicineLabel.text = @"当归";
+    cell.weightLabel.text = @"20g";
+    
+    CGSize itemSize = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    itemSize.width = MIN(itemSize.width, CGRectGetWidth(collectionView.bounds) - ((UICollectionViewFlowLayout *)collectionViewLayout).sectionInset.left - ((UICollectionViewFlowLayout *)collectionViewLayout).sectionInset.right);
+    return itemSize;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0007DF9C-399E-42AC-8882-90B77F1BBC98</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>MyCollectionViewDeleage</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MyUIStackView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
+		<string>All</string>
+		<string>CodeExpression</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIStackView *&lt;#name#&gt;StackView = [[UIStackView alloc] initWithArrangedSubviews:@[&lt;#subView#&gt;, &lt;#subView#&gt;]];
+    &lt;#name#&gt;.axis = UILayoutConstraintAxisVertical;
+    &lt;#name#&gt;.alignment = UIStackViewAlignmentCenter;
+    &lt;#name#&gt;.spacing = &lt;#spaceing#&gt;;
+    [self addSubview:&lt;#name#&gt;];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5EB823DF-F04D-4D23-8F4D-54FA3C0548EE</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>MyUIStackView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

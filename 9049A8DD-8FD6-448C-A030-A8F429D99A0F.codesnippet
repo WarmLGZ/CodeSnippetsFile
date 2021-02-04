@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MyMasnoryMake</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
+		<string>All</string>
+		<string>CodeExpression</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string> [&lt;#view#&gt; mas_makeConstraints:^(MASConstraintMaker *make) {
+     make.top.equalTo(&lt;#view#&gt;.&lt;#mas_layout#&gt;).offset(&lt;#offset#&gt;.0);
+        make.leading.equalTo(&lt;#view#&gt;.&lt;#mas_layout#&gt;).offset(&lt;#offset#&gt;.0);
+        make.trailing.equalTo(&lt;#view#&gt;.&lt;#mas_layout#&gt;).offset(-&lt;#offset#&gt;.0);
+        make.bottom.equalTo(&lt;#view#&gt;.&lt;#mas_layout#&gt;).offset(-&lt;#offset#&gt;.0);
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9049A8DD-8FD6-448C-A030-A8F429D99A0F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>MyMasnoryMake</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

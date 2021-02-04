@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MyHuggingPriority</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)heightPriorityLabel:(UILabel *)hLabel lowPriorityLabel:(UILabel *)lLabel {
+    // 抗拉伸
+    [hLabel setContentHuggingPriority:UILayoutPriorityRequired
+                                     forAxis:UILayoutConstraintAxisHorizontal];
+    [lLabel setContentHuggingPriority:UILayoutPriorityDefaultLow
+                                         forAxis:UILayoutConstraintAxisHorizontal];
+    
+    // 抗压缩
+    [hLabel setContentCompressionResistancePriority:UILayoutPriorityRequired
+                                                   forAxis:UILayoutConstraintAxisHorizontal];
+    [lLabel setContentCompressionResistancePriority:UILayoutPriorityDefaultLow
+                                                       forAxis:UILayoutConstraintAxisHorizontal];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1CD9BF93-F010-4532-A9D3-AB016C11FB42</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>MyHuggingPriority</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
